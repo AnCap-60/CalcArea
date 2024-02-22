@@ -13,15 +13,17 @@ namespace CalcAreaLib
             get
             {
                 var sorted = Sides.Order().ToArray();
-                return (sorted[0] * sorted[0] + sorted[1] * sorted[1] - sorted[2] * sorted[2]) < 1e-10;
+                return Math.Abs(sorted[0] * sorted[0] + sorted[1] * sorted[1] - sorted[2] * sorted[2]) < 1e-12;
             }
         }
 
         public Triangle(params double[] sides) : base(sides)
         {
-            ArgumentOutOfRangeException.ThrowIfNotEqual(sides.Length, 3, "Incorrect sides for triangle");
-
-            // Можно было бы сделать проверку каждой стороны на положительность, но это затронуло бы быстродействие
+            ArgumentOutOfRangeException.ThrowIfNotEqual(sides.Length, 3, "Incorrect num of sides for triangle");
+            
+            double max = Math.Max(sides[0], Math.Max(sides[1], sides[2]));
+            if (sides[0] + sides[1] + sides[2] - max < max)
+                throw new ArgumentException("Wrong sides");
         }
 
         public override double GetSquare()
