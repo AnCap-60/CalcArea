@@ -5,7 +5,12 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcAreaLib", "CalcAreaLib\CalcAreaLib.csproj", "{5884D535-1BEE-41DB-BD30-ADA61027C1EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcAreaTests", "CalcAreaTests\CalcAreaTests.csproj", "{0D44F685-1BDA-4266-838D-DA13993F6A22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalcAreaTests", "CalcAreaTests\CalcAreaTests.csproj", "{0D44F685-1BDA-4266-838D-DA13993F6A22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{365F4DC7-7211-4E06-BCD2-CDCDE7C18C78}"
+	ProjectSection(SolutionItems) = preProject
+		SqlQuery.sql = SqlQuery.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
